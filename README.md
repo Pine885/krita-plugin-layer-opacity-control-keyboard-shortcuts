@@ -1,6 +1,6 @@
-# Layer Opacity Control for Krita
+# Layer Opacity Control using shortcut keys for Krita
 
-A lightweight Krita plugin that allows you to quickly increase or decrease the opacity of the active layer using configurable increments.
+A Krita plugin that allows you to quickly increase or decrease the opacity of the active layer using keyboard shortcuts with configurable increments.
 
 ## ✨ Features
 
