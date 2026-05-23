@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActionCollection version="2" name="Layer Opacity Control">
+    <Actions category="Layer Opacity Control">
+        <text>Layer Opacity Control</text>
+
+        <Action name="layer_opacity_increase">
+            <icon></icon>
+            <text>Increase Layer Opacity</text>
+            <whatsThis>Increases the opacity of the active layer by the configured increment.</whatsThis>
+            <toolTip>Increase Layer Opacity</toolTip>
+            <iconText>Increase Layer Opacity</iconText>
+            <activationFlags>10000</activationFlags>
+            <activationConditions>0</activationConditions>
+            <shortcut></shortcut>
+            <isCheckable>false</isCheckable>
+            <statusTip>Increases layer opacity.</statusTip>
+        </Action>
+
+        <Action name="layer_opacity_decrease">
+            <icon></icon>
+            <text>Decrease Layer Opacity</text>
+            <whatsThis>Decreases the opacity of the active layer by the configured increment.</whatsThis>
+            <toolTip>Decrease Layer Opacity</toolTip>
+            <iconText>Decrease Layer Opacity</iconText>
+            <activationFlags>10000</activationFlags>
+            <activationConditions>0</activationConditions>
+            <shortcut></shortcut>
+            <isCheckable>false</isCheckable>
+            <statusTip>Decreases layer opacity.</statusTip>
+        </Action>
+
+        <Action name="layer_opacity_configure">
+            <icon></icon>
+            <text>Configure Opacity Increment</text>
+            <whatsThis>Opens the settings dialog to change the opacity increment value.</whatsThis>
+            <toolTip>Configure Opacity Increment</toolTip>
+            <iconText>Configure Opacity Increment</iconText>
+            <activationFlags>10000</activationFlags>
+            <activationConditions>0</activationConditions>
+            <shortcut></shortcut>
+            <isCheckable>false</isCheckable>
+            <statusTip>Configure opacity settings.</statusTip>
+        </Action>
+    </Actions>
+</ActionCollection>
