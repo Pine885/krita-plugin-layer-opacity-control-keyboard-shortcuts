@@ -5,7 +5,7 @@ A Krita plugin that allows you to quickly increase or decrease the opacity of th
 ## ✨ Features
 
 - **Quick Opacity Adjustment**: Increase or decrease layer opacity with a single click or keybind.
-- **Configurable Increments**: Set your own opacity step value (e.g., 5%, 10%, 17%) via a built-in settings dialog.
+- **Configurable Increments**: Set your own opacity step value (e.g., 5, 10, 17) via a built-in settings dialog.
 - **Auto-Shortcut Installation**: The plugin automatically installs its action definitions, making it easy to assign keyboard shortcuts.
 - **Cross-Platform**: Works on Windows, Linux, and macOS.
 
