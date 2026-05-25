@@ -7,22 +7,7 @@ A Krita plugin that allows you to quickly increase or decrease the opacity of th
 - **Quick Opacity Adjustment**: Increase or decrease layer opacity with a single click or keybind.
 - **Configurable Increments**: Set your own opacity step value (e.g., 5, 10, 17) via a built-in settings dialog.
 - **Auto-Shortcut Installation**: The plugin automatically installs its action definitions, making it easy to assign keyboard shortcuts.
-- **Cross-Platform**: Works on Windows, Linux, and macOS.
-
-## Why is this needed?
-
-Maintaining high-speed momentum during digital painting relies on keeping your focus on the canvas and your hands on your shortcut keys. While adjusting canvas zoom, brush size, and brush opacity can be handled entirely via hotkeys, adjusting a layer's transparency currently requires navigating the cursor away from the drawing area to interact with the slider in the Layers docker.
-
-This plugin bridges that workflow gap by allowing artists to map layer opacity adjustments directly to their keyboard. By minimizing repetitive cursor travel, it creates a smoother, more fluid painting experience and keeps your focus right where your stylus meets the canvas.
-
-## Default Krita shortcut limitations for layer adjustments
-
-Krita features an incredibly robust shortcut system, including default keys to quickly step your active brush preset's opacity up or down. However, a parallel hotkey action does not yet exist for individual layer nodes. 
-
-* **Feature Parity:** While brush opacity relies on quick keyboard adjustments to shift values on the fly, layer opacity remains a purely mouse- or stylus-driven slider interaction. 
-* **Layer Operations Context:** Krita provides deep keyboard control for managing the layer stack—allowing users to seamlessly create, delete, merge, or reorder layers via hotkeys—but layer properties like transparency do not yet share this native keyboard integration.
-
-
+  
 ## 🚀 Installation
 
 ### 1. Import the Plugin
