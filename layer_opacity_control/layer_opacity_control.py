@@ -79,6 +79,14 @@ class LayerOpacityExtension(Extension):
         if not node:
             return
 
+        # Defensive check: only proceed for supported layer types
+        if node.type() not in ('paintlayer', 'grouplayer', 'vectorlayer', 'filllayer'):
+            return
+
+        # If it's a group layer, ensure it's not a pass-through group so opacity is visible
+        if node.type() == 'grouplayer' and hasattr(node, 'passThrough') and node.passThrough():
+            node.setPassThrough(False)
+
         increment = self.get_increment()
         current_opacity = node.opacity()
         new_opacity = min(255, current_opacity + increment)
@@ -95,6 +103,14 @@ class LayerOpacityExtension(Extension):
         node = doc.activeNode()
         if not node:
             return
+
+        # Defensive check: only proceed for supported layer types
+        if node.type() not in ('paintlayer', 'grouplayer', 'vectorlayer', 'filllayer'):
+            return
+
+        # If it's a group layer, ensure it's not a pass-through group so opacity is visible
+        if node.type() == 'grouplayer' and hasattr(node, 'passThrough') and node.passThrough():
+            node.setPassThrough(False)
 
         increment = self.get_increment()
         current_opacity = node.opacity()

@@ -9,7 +9,7 @@
             <whatsThis>Increases the opacity of the active layer by the configured increment.</whatsThis>
             <toolTip>Increase Layer Opacity</toolTip>
             <iconText>Increase Layer Opacity</iconText>
-            <activationFlags>10000</activationFlags>
+            <activationFlags>0</activationFlags>
             <activationConditions>0</activationConditions>
             <shortcut></shortcut>
             <isCheckable>false</isCheckable>
@@ -22,7 +22,7 @@
             <whatsThis>Decreases the opacity of the active layer by the configured increment.</whatsThis>
             <toolTip>Decrease Layer Opacity</toolTip>
             <iconText>Decrease Layer Opacity</iconText>
-            <activationFlags>10000</activationFlags>
+            <activationFlags>0</activationFlags>
             <activationConditions>0</activationConditions>
             <shortcut></shortcut>
             <isCheckable>false</isCheckable>
@@ -35,7 +35,7 @@
             <whatsThis>Opens the settings dialog to change the opacity increment value.</whatsThis>
             <toolTip>Configure Opacity Increment</toolTip>
             <iconText>Configure Opacity Increment</iconText>
-            <activationFlags>10000</activationFlags>
+            <activationFlags>0</activationFlags>
             <activationConditions>0</activationConditions>
             <shortcut></shortcut>
             <isCheckable>false</isCheckable>

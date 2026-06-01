@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Layer Opacity Control Manual</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+        h1 { color: #3daee9; }
+        h2 { color: #555; border-bottom: 1px solid #ccc; margin-top: 30px; }
+        .shortcut { background: #f0f0f0; padding: 3px 6px; border-radius: 4px; font-family: monospace; }
+        .note { background: #fffacd; padding: 10px; border-left: 5px solid #ffcc00; margin: 15px 0; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <h1>Layer Opacity Control</h1>
+    <p>Version 1.1.0 | A Krita Extension for efficient opacity management.</p>
+
+    <h2>📖 Overview</h2>
+    <p>Layer Opacity Control allows you to quickly increase or decrease the opacity of the currently selected layer or group using keyboard shortcuts. This eliminates the need to manually adjust the opacity slider for every small change.</p>
+
+    <h2>🚀 Getting Started</h2>
+    <ol>
+        <li>Enable the plugin in <strong>Settings &rarr; Configure Krita &rarr; Python Plugin Manager</strong>.</li>
+        <li>Restart Krita to apply the changes.</li>
+        <li>Configure your preferred shortcuts in <strong>Settings &rarr; Configure Krita &rarr; Keyboard Shortcuts</strong>. Search for "Layer Opacity Control" to find the actions.</li>
+    </ol>
+
+    <h2>⌨️ Usage</h2>
+    <p>Select any paint layer, vector layer, or group layer in the layer stack and use your assigned shortcuts to adjust the opacity.</p>
+    
+    <h3>Configuring the Increment</h3>
+    <p>You can change how much the opacity changes with each press. Go to <strong>Tools &rarr; Scripts &rarr; Configure Opacity Increment</strong> to set a value between 1 and 255.</p>
+
+    <h2>🐛 Troubleshooting</h2>
+    <p><strong>Action is grayed out:</strong> If the script is disabled when selecting a group, ensure you are using the latest version of the plugin which sets <code>activationFlags</code> to <code>0</code>.</p>
+    
+    <div class="note">
+        <strong>📘 Note on Group Layers:</strong> This plugin supports both Normal and Pass-through groups. If a Pass-through group is selected, the plugin will automatically convert it to a Normal group to ensure the opacity change is visible on the canvas.
+    </div>
+
+</body>
+</html>
