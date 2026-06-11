@@ -41,6 +41,3 @@ You can find the plugin actions under the menu:
 2. Select **Keyboard Shortcuts**.
 3. Search for **"Layer Opacity Control"**.
 4. Assign your preferred keys to the increase and decrease actions.
-
-## 📜 License
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
