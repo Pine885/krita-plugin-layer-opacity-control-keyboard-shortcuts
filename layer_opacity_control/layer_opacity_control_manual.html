@@ -14,30 +14,30 @@
 </head>
 <body>
 
-    <h1>Layer Opacity Control</h1>
-    <p>Version 1.1.0 | A Krita Extension for efficient opacity management.</p>
+    <h1>Layer Opacity Control (v1.2)</h1>
+    <p>Version 1.2.0 | A Krita Extension for efficient opacity management (★ω★).</p>
 
-    <h2>📖 Overview</h2>
-    <p>Layer Opacity Control allows you to quickly increase or decrease the opacity of the currently selected layer or group using keyboard shortcuts. This eliminates the need to manually adjust the opacity slider for every small change.</p>
+    <h2>Overview (・ω・)</h2>
+    <p>Layer Opacity Control allows you to quickly adjust layer opacity using keyboard shortcuts.</p>
 
-    <h2>🚀 Getting Started</h2>
+    <h2>Getting Started (o^▽^o)</h2>
     <ol>
         <li>Enable the plugin in <strong>Settings &rarr; Configure Krita &rarr; Python Plugin Manager</strong>.</li>
-        <li>Restart Krita to apply the changes.</li>
-        <li>Configure your preferred shortcuts in <strong>Settings &rarr; Configure Krita &rarr; Keyboard Shortcuts</strong>. Search for "Layer Opacity Control" to find the actions.</li>
+        <li>Restart Krita to apply changes.</li>
+        <li>Configure shortcuts in <strong>Settings &rarr; Configure Krita &rarr; Keyboard Shortcuts</strong>.</li>
     </ol>
 
-    <h2>⌨️ Usage</h2>
-    <p>Select any paint layer, vector layer, or group layer in the layer stack and use your assigned shortcuts to adjust the opacity.</p>
+    <h2>Usage (｡♥‿♥｡)</h2>
+    <p>Select any paint layer, vector layer, or group layer and use assigned shortcuts.</p>
     
     <h3>Configuring the Increment</h3>
-    <p>You can change how much the opacity changes with each press. Go to <strong>Tools &rarr; Scripts &rarr; Configure Opacity Increment</strong> to set a value between 1 and 255.</p>
+    <p>Go to <strong>Tools &rarr; Scripts &rarr; Configure Opacity Increment</strong> to set a value between 1 and 255.</p>
 
-    <h2>🐛 Troubleshooting</h2>
-    <p><strong>Action is grayed out:</strong> If the script is disabled when selecting a group, ensure you are using the latest version of the plugin which sets <code>activationFlags</code> to <code>0</code>.</p>
+    <h2>Troubleshooting (o_O)</h2>
+    <p><strong>Action is grayed out:</strong> Ensure you are using the latest version with automatic action setup.</p>
     
     <div class="note">
-        <strong>📘 Note on Group Layers:</strong> This plugin supports both Normal and Pass-through groups. If a Pass-through group is selected, the plugin will automatically convert it to a Normal group to ensure the opacity change is visible on the canvas.
+        <strong>Note on Group Layers:</strong> Supports Normal and Pass-through groups. Pass-through groups are automatically converted to Normal groups when opacity changes.
     </div>
 
 </body>

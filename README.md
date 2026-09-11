@@ -1,14 +1,15 @@
-# Layer Opacity Control using shortcut keys for Krita
+# Layer Opacity Control for Krita (v1.2)
 
-A Krita plugin that allows you to quickly increase or decrease the opacity of the active layer using keyboard shortcuts with configurable increments.
+A lightweight Krita plugin to quickly adjust active layer opacity with configurable increments.
 
-## ✨ Features
+## Features (★ω★)
 
-- **Quick Opacity Adjustment**: Increase or decrease layer opacity with a single click or keybind.
-- **Configurable Increments**: Set your own opacity step value (e.g., 5, 10, 17) via a built-in settings dialog.
-- **Auto-Shortcut Installation**: The plugin automatically installs its action definitions, making it easy to assign keyboard shortcuts.
-  
-## 🚀 Installation
+- **Quick Opacity Adjustment**: Increase or decrease opacity with a single click or keybind.
+- **Configurable Increments**: Set custom step values via settings dialog.
+- **Auto-Shortcut Installation**: Automatically installs action definitions for easy keybinding.
+- **Cross-Platform**: Works on Windows, Linux, and macOS.
+
+## Installation (o^▽^o)
 
 ### 1. Import the Plugin
 1. Download the latest release ZIP file.
@@ -19,25 +20,23 @@ A Krita plugin that allows you to quickly increase or decrease the opacity of th
 1. Restart **Krita**.
 2. Go to **Settings** ‣ **Configure Krita**.
 3. Select **Python Plugin Manager** from the left sidebar.
-4. Find **Layer Opacity Control** in the list and check the box next to it.
-5. Click **OK**.
-6. **Restart Krita** one more time.
+4. Find **Layer Opacity Control** and check the box.
+5. Click **OK** and **Restart Krita**.
 
 ### 3. Finalize Shortcuts
-The plugin automatically copies its shortcut definitions to the Krita resources folder on its first run. To make these shortcuts available in the settings menu:
-1. **Restart Krita one last time**.
+1. Restart Krita one final time to load installed shortcuts.
 
-## 🛠️ Usage
+## Usage (｡♥‿♥｡)
 
-### Accessing the Plugin
-You can find the plugin actions under the menu:
+### Accessing Actions
 **Tools** ‣ **Scripts** ‣ **Layer Opacity Control**
-- **Increase Layer Opacity**: Increases opacity by the set increment.
-- **Decrease Layer Opacity**: Decreases opacity by the set increment.
-- **Configure Opacity Increment**: Opens a dialog to change the increment value.
+- **Increase Layer Opacity**: Increases opacity by set increment.
+- **Decrease Layer Opacity**: Decreases opacity by set increment.
+- **Configure Opacity Increment**: Changes the increment value.
 
 ### Setting Keyboard Shortcuts
-1. Go to **Settings** ‣ **Configure Krita**.
-2. Select **Keyboard Shortcuts**.
-3. Search for **"Layer Opacity Control"**.
-4. Assign your preferred keys to the increase and decrease actions.
+1. Go to **Settings** ‣ **Configure Krita** ‣ **Keyboard Shortcuts**.
+2. Search for **"Layer Opacity Control"** and assign keys.
+
+## License (^_<)-☆
+Licensed under the GNU General Public License v3.0 - see [LICENSE](LICENSE).
