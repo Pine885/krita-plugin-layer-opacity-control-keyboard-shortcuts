@@ -2,14 +2,14 @@
 
 A lightweight Krita plugin to quickly adjust active layer opacity with configurable increments.
 
-## Features (★ω★)
+## Features
 
 - **Quick Opacity Adjustment**: Increase or decrease opacity with a single click or keybind.
 - **Configurable Increments**: Set custom step values via settings dialog.
 - **Auto-Shortcut Installation**: Automatically installs action definitions for easy keybinding.
 - **Cross-Platform**: Works on Windows, Linux, and macOS.
 
-## Installation (o^▽^o)
+## Installation
 
 ### 1. Import the Plugin
 1. Download the latest release ZIP file.
@@ -26,7 +26,7 @@ A lightweight Krita plugin to quickly adjust active layer opacity with configura
 ### 3. Finalize Shortcuts
 1. Restart Krita one final time to load installed shortcuts.
 
-## Usage (｡♥‿♥｡)
+## Usage
 
 ### Accessing Actions
 **Tools** ‣ **Scripts** ‣ **Layer Opacity Control**
@@ -38,5 +38,5 @@ A lightweight Krita plugin to quickly adjust active layer opacity with configura
 1. Go to **Settings** ‣ **Configure Krita** ‣ **Keyboard Shortcuts**.
 2. Search for **"Layer Opacity Control"** and assign keys.
 
-## License (^_<)-☆
+## License
 Licensed under the GNU General Public License v3.0 - see [LICENSE](LICENSE).
