@@ -1,0 +1,5 @@
+doc = Krita.instance().activeDocument()
+node = doc.activeNode()
+opacity = node.opacity()
+node.setOpacity(min(255, opacity + 17))
+node.setBlendingMode(node.blendingMode())

@@ -1,42 +1,45 @@
-# Layer Opacity Control for Krita (v1.2)
+# Layer Opacity Control (v2.0)
 
-A lightweight Krita plugin to quickly adjust active layer opacity with configurable increments.
+Krita Python plugin. Adjust active layer opacity via configurable percent increment.
 
-## Features
+## Install
+1. Tools > Scripts > Import Python Plugin from File...
+2. Select `layer_opacity_control.zip`
+3. Restart Krita
+4. Settings > Configure Krita > Python Plugin Manager > enable `Layer Opacity Control`
+5. Restart Krita
+6. Settings > Configure Krita > Keyboard Shortcuts > search `Layer Opacity Control` > assign keys
 
-- **Quick Opacity Adjustment**: Increase or decrease opacity with a single click or keybind.
-- **Configurable Increments**: Set custom step values via settings dialog.
-- **Auto-Shortcut Installation**: Automatically installs action definitions for easy keybinding.
-- **Cross-Platform**: Works on Windows, Linux, and macOS.
+## Actions
+- Increase Layer Opacity: `+increment`
+- Decrease Layer Opacity: `-increment`
+- Configure Opacity Increment: set `1..100`, default `7`
 
-## Installation
+## Config
+- Path: `<AppDataLocation>/layer_opacity_control/config.json`
+- Key: `increment_percent`
+- Range: `1..100`
+- Default: `7`
 
-### 1. Import the Plugin
-1. Download the latest release ZIP file.
-2. In Krita, go to **Tools** ‣ **Scripts** ‣ **Import Python Plugin from File…**
-3. Select the downloaded ZIP file.
+## Behavior
+- Clamps opacity `0..100%`
+- Snaps to whole-percent before delta to avoid rounding drift
+- Skips locked layers
+- Pass-through groups: `setPassThrough(False)` before `setOpacity`
+- Forces repaint via `setBlendingMode(node.blendingMode())`
+- Does not call `refreshProjection()`
 
-### 2. Enable the Plugin
-1. Restart **Krita**.
-2. Go to **Settings** ‣ **Configure Krita**.
-3. Select **Python Plugin Manager** from the left sidebar.
-4. Find **Layer Opacity Control** and check the box.
-5. Click **OK** and **Restart Krita**.
+## Files
+- `layer_opacity_control.desktop`
+- `layer_opacity_control/`
+  - `__init__.py`
+  - `layer_opacity_control.py`
+  - `layer_opacity_control.action`
+  - `layer_opacity_control_manual.html`
 
-### 3. Finalize Shortcuts
-1. Restart Krita one final time to load installed shortcuts.
-
-## Usage
-
-### Accessing Actions
-**Tools** ‣ **Scripts** ‣ **Layer Opacity Control**
-- **Increase Layer Opacity**: Increases opacity by set increment.
-- **Decrease Layer Opacity**: Decreases opacity by set increment.
-- **Configure Opacity Increment**: Changes the increment value.
-
-### Setting Keyboard Shortcuts
-1. Go to **Settings** ‣ **Configure Krita** ‣ **Keyboard Shortcuts**.
-2. Search for **"Layer Opacity Control"** and assign keys.
-
-## License
-Licensed under the GNU General Public License v3.0 - see [LICENSE](LICENSE).
+## Troubleshooting
+- Actions missing: enable plugin, restart Krita
+- Shortcut does nothing: action file not installed, restart Krita
+- No active layer: select layer
+- Locked layer: unlock
+- Group layer no effect: pass-through converted to Normal on opacity change
