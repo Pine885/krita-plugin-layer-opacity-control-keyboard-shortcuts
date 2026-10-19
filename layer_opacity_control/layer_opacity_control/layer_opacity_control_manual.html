@@ -10,60 +10,68 @@
         .shortcut { background: #f0f0f0; padding: 3px 6px; border-radius: 4px; font-family: monospace; }
         .note { background: #fffacd; padding: 10px; border-left: 5px solid #ffcc00; margin: 15px 0; }
         code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+        table { border-collapse: collapse; margin: 10px 0; }
+        th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; vertical-align: top; }
+        th { background: #f0f0f0; }
     </style>
 </head>
 <body>
 
-    <h1>Layer Opacity Control (v2.0)</h1>
-    <p>Version 2.0.0 | Krita Extension for opacity management.</p>
+    <h1>Layer Opacity Control v2.1.0</h1>
+    <p><code>Version 2.1.0</code></p>
 
     <h2>Install</h2>
     <ol>
-        <li>Tools &rarr; Scripts &rarr; Import Python Plugin from File...</li>
-        <li>Select <code>layer_opacity_control.zip</code>.</li>
+        <li>Tools &rarr; Scripts &rarr; Import Python Plugin from File... &rarr; <code>layer_opacity_control.zip</code></li>
         <li>Restart Krita.</li>
-        <li>Settings &rarr; Configure Krita &rarr; Python Plugin Manager &rarr; enable <strong>Layer Opacity Control</strong>.</li>
+        <li>Settings &rarr; Configure Krita &rarr; Python Plugin Manager &rarr; enable <code>Layer Opacity Control</code>.</li>
         <li>Restart Krita.</li>
         <li>Settings &rarr; Configure Krita &rarr; Keyboard Shortcuts &rarr; search <code>Layer Opacity Control</code> &rarr; assign keys.</li>
     </ol>
 
     <h2>Actions</h2>
-    <ul>
-        <li><strong>Increase Layer Opacity</strong>: <code>+increment</code></li>
-        <li><strong>Decrease Layer Opacity</strong>: <code>-increment</code></li>
-        <li><strong>Configure Opacity Increment</strong>: set <code>1..100</code>, default <code>5</code></li>
-    </ul>
+    <table>
+        <tr><th>Action</th><th>Effect</th></tr>
+        <tr><td>Increase Layer Opacity</td><td><code>+increment</code></td></tr>
+        <tr><td>Decrease Layer Opacity</td><td><code>-increment</code></td></tr>
+        <tr><td>Configure Opacity Increment</td><td>dialog: increment + <code>all_selected_layers</code></td></tr>
+    </table>
 
     <h2>Config</h2>
     <ul>
         <li>Path: <code>&lt;AppDataLocation&gt;/layer_opacity_control/config.json</code></li>
-        <li>Key: <code>increment_percent</code></li>
-        <li>Range: <code>1..100</code></li>
-        <li>Default: <code>5</code></li>
+    </ul>
+    <table>
+        <tr><th>Key</th><th>Type</th><th>Range/Values</th><th>Default</th></tr>
+        <tr><td><code>increment_percent</code></td><td>int</td><td><code>1..100</code></td><td><code>5</code></td></tr>
+        <tr><td><code>all_selected_layers</code></td><td>bool</td><td><code>true</code>/<code>false</code></td><td><code>false</code></td></tr>
+    </table>
+    <ul>
+        <li>Legacy <code>increment</code> (1..255) &rarr; <code>increment_percent</code> on first read.</li>
+        <li>Cache: in memory.</li>
+        <li>Write: atomic (temp file + <code>os.replace</code>).</li>
     </ul>
 
     <h2>Behavior</h2>
-    <ul>
-        <li>Clamps opacity <code>0..100%</code>.</li>
-        <li>Snaps to whole-percent before delta.</li>
-        <li>Skips locked layers.</li>
-        <li>Pass-through groups: <code>setPassThrough(False)</code> before <code>setOpacity</code>.</li>
-        <li>Forces repaint via <code>setBlendingMode(node.blendingMode())</code>.</li>
-        <li>Does not call <code>refreshProjection()</code>.</li>
-    </ul>
+    <table>
+        <tr><th>Item</th><th>Value</th></tr>
+        <tr><td>Opacity clamp</td><td><code>0..100%</code></td></tr>
+        <tr><td>Percent snap</td><td>whole percent before delta</td></tr>
+        <tr><td>Locked layers</td><td>skipped</td></tr>
+        <tr><td>Multi-layer</td><td><code>all_selected_layers=true</code> &rarr; <code>View.selectedNodes()</code>; fallback <code>activeNode()</code></td></tr>
+        <tr><td>Repaint</td><td><code>setBlendingMode(node.blendingMode())</code></td></tr>
+        <tr><td>No active layer / error</td><td><code>View.showFloatingMessage()</code></td></tr>
+    </table>
 
     <h2>Troubleshooting</h2>
-    <ul>
-        <li>Actions missing: enable plugin, restart Krita.</li>
-        <li>Shortcut does nothing: action file not installed, restart Krita.</li>
-        <li>No active layer: select layer.</li>
-        <li>Locked layer: unlock.</li>
-        <li>Group layer no effect: pass-through converted to Normal on opacity change.</li>
-    </ul>
-
-    <div class="note">
-        <strong>Group Layers:</strong> Normal and Pass-through groups supported. Pass-through groups are converted to Normal when opacity changes.
-    </div>
+    <table>
+        <tr><th>Symptom</th><th>Fix</th></tr>
+        <tr><td>Actions missing</td><td>enable plugin, restart Krita</td></tr>
+        <tr><td>Shortcut does nothing</td><td>action file not installed, restart Krita</td></tr>
+        <tr><td>No active layer</td><td>select layer</td></tr>
+        <tr><td>Locked layer</td><td>unlock</td></tr>
+        <tr><td>Group layer no effect</td><td>check the group's pass-through and blend settings</td></tr>
+    </table>
 
 </body>
 </html>
